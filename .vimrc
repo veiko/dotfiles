@@ -151,7 +151,9 @@ nnoremap <leader>ev :split $MYVIMRC<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
 
 " Remape esc in the terminal to exit
-:tnoremap <Esc> <C-\><C-n>
+if has("nvim")
+  :tnoremap <Esc> <C-\><C-n>
+endif
 
 
 "*****************************************************************************
